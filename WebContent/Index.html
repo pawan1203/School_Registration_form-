@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="form.css" type="text/css">
+<h2>Shree Jain Vidyalaya Admission Form</h2>
+<div id="time">Time:<span id="txt" style="margin-right:90%" ></span></div>
+<marquee scrollamount="10" width="90%" height="20" behaviour="alternate" ><span id="blinker">Admission Form for the Year(2017-2018)</span></marquee>
+<script src="form.js"></script>
+<body onload="startTime()">
+
+<form id="Application_form" action="Reg.jsp" method="get">
+<fieldset>
+<h4>Details of the Student:</h4>
+<p>First Name:<b>*</b>&nbsp;&nbsp;<input type="text" style="text-align:center;" name="fname"  placeholder="Enter First Name" onkeypress="return validate_fname_fun(event)" >
+&nbsp;&nbsp;&nbsp;&nbsp; Middle Name:&nbsp;&nbsp;<input type="text" style="text-align:center;" name="mname"  placeholder="Enter Middle Name" onkeypress="return validate_mname_fun(event)"></input>
+&nbsp;&nbsp;&nbsp;&nbsp; Last Name:<b>*</b>&nbsp;&nbsp;<input type="text" style="text-align:center;" name="lname"  placeholder="Enter Last Name" onkeypress="return validate_lname_fun(event)"></input>
+<p></p>
+Class:<b>*</b>&nbsp;&nbsp;<input type="number" style="text-align:center;" name="class" min="1" max="12" onchange="validate_Class()" onfocus="this.value=''"></input>&nbsp;&nbsp;&nbsp; 
+DOB:<b>*</b>&nbsp;&nbsp;<input type="date" id="dt" name="date" onfocus="this.value=''" onchange="validate_DOB()"></input> 
+&nbsp;&nbsp;Gender:<b>*</b><input type="radio" name="gender" value="male">Male</input><input type="radio" name="gender" value="female" >Female</input> 
+<input type="radio" name="gender" value="other" >Other</input>                                                                                          
+<p></p>
+Course:<b>*</b>&nbsp;&nbsp;<select id="course" name="course" >
+                          <option value=""></option>
+						  <option value="Science">Science</option>
+						  <option value="Commerce">Commerce</option>
+						  <option value="B.tech">B.tech</option>
+						  <option value="MBA">MBA</option>
+						  </select>
+						  <p></p>
+Email:<b>*</b>&nbsp;&nbsp;<input type="email" name="email"  onkeyup="sendInfo()" onchange="return validate_Email()" ><span style="color:red"id="t"></span></input> 
+&nbsp;&nbsp;&nbsp;&nbsp;Phone:<b>*</b>&nbsp;&nbsp;<input type="text" name="phone" onkeypress="return validate_phone_fun(event)" ></input>
+<h4>Communication Address:</h4>
+House no./Flat no./Building no.:<b>*</b>&nbsp;&nbsp;<input type="text" name="house" onchange="return validate_House()" ></input><p></p> Street Name:<b>*</b>&nbsp;&nbsp;<input type="text" name="street" onchange="validate_Street()" ></input><p></p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ></input>
+<p></p>State:<b>*</b>
+<select id="state" class="state" name="state" onchange="StateCity('state','city')"  placeholder="please select state" >
+<option value="" selected>please select</option>					
+						<option value="Andhra Pradesh">Andhra Pradesh</option>
+						<option value="Bihar">Bihar</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="West Bengal">West Bengal</option>
+						</select>
+ City:<b>*</b><select id="city" name="city" ></select>
+ <p>Pincode:<b>*</b>&nbsp;&nbsp;<input type="text" name="pin" style="text-align:center;"onkeypress="return validate_pin(event)"/>
+<p>Nationality:<b>*</b>&nbsp;&nbsp;<input type="text" name="nationality" style="text-align:center;" onkeypress="return validate_nationality(event)"  ></input>
+ &nbsp; &nbsp;Religion<b>*</b>&nbsp;&nbsp;<select id="religion" name="religion" >
+                         <option Value=""selected></option>
+                        <option Value="Hindu">Hindu</option>
+						<option Value="Muslim">Muslim</option>
+						<option Value="Christian">Christian</option>
+						<option Value="Sikh">Sikh</option>
+						</select> <p></p>
+						
+<h4>Educational Details:<h4>						
+<p></p>						
+<table style="width:80%">
+<tr>
+<th>Degree</th>
+<th>University</th>
+<th>Percentage</th></tr>
+<tr>
+<th><input type="text" name="degree" style="width:100%"></input></th>
+<th><input type="text" name="university" style="width:100%"></input></th>
+<th><input type="text" name="percentage" style="width:100%"></input></th></tr>
+<tr>
+<th><input type="text" name="degree1" style="width:100%"></input></th>
+<th><input type="text" name="university1" style="width:100%"></input></th>
+<th><input type="text" name="percentage2" style="width:100%"></input></th></tr>
+</table>
+ 
+<p></p><input type="submit" value="Submit"  onclick="return ValidateSubmit()"></input>&nbsp; &nbsp;&nbsp; &nbsp;<input type="reset" value="Reset"/>
+</fieldset>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color: #76D7C4;
+}
+h2 {
+    text-align: center;
+}
+body div{
+    font-size:20px;
+	margin-left:90%;
+}
+form b{
+	color: #f00;
+}
+form select{
+	color:Blue;
+	font-size:20px;
+	font-family:bold;
+}
+input, textarea{
+	color: Blue;
+	font-family:bold;
+	font-size: 20px;
+	display:inline-block;
+	border:10px;
+}
+ marquee{
+   color:red;
+   font-size:20px;
+   margin-right:30px;
+   margin-left:70px;
+   
+  }
+
+ table,th,td{
+   border:1px Solid Black;
+   width:20%;
+   } 
+.error{
+      color: red;
+}
+input[aria-invalid="true"], textarea[aria-invalid="true"] {
+  border: 2px solid #f00;
+  box-shadow: 0 0 5px 0 #f00;
+}
+form fieldset{
+	font-size: 20px;
+}
+form input[type=radio] {
+    border: 0px;
+    width: 50px;
+    height: 0.8em;
+}
